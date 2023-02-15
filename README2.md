@@ -22,4 +22,55 @@
 
 11- Access your instance. Once your instance is running, you can access it by SSHing into it using the key pair you created earlier.
 
-12- 
+12- To do this go to the connection page and follow the steps on screen:
+![img_2.png](img_2.png)
+- Once you have done that you should see the following. ![img_3.png](img_3.png)
+
+# Migrating files to AWS
+
+Migrating files to aws can do done by doing the following.
+We can use the SCP command
+
+`scp -i devops-tech201.pem -r C:\Users\James_Cole\.vscode\tech201_virtualisation\tech201_virtualisation\app ubuntu@ec2-34-248-205-55.eu-west-1.compute.amazonaws.com:/home/ubuntu`
+
+This line has to be written in the .ssh folder on your pc to connect to the remote host.
+
+after this we must connect to our AWS and navigate to the app file such as `ubuntu@ip-172-31-21-5:~/app$.`
+
+Then run the following:
+
+`sudo apt install npm`
+
+`node app.js`
+
+# Running the app and setting up the reverse proxy
+
+Navigate to your IP address in EC2 Instance connect from the AWS website. by going to the :3000 port your app should now be working however, It will not work by reverse proxy unless it has been configured this way.
+
+
+# How to a working reverse proxy
+
+
+    First, access your VM by typing in terminal the vagrant up(to get it running) and vagrant ssh(to get inside the VM) commands.
+    Now, within your VM, run the command sudo nano /etc/nginx/sites-available/default. This will open up the default configuration file for NGINX and allow you to make the necessary changes. This file should look like this:
+
+you then want to add the following `server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+
+        root /var/www/html;
+
+
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name _;
+
+        location / {
+                proxy_pass http://localhost:3000;
+        }
+
+}
+
+
+this Will allow the app to work without port 3000 like so:
+![img_5.png](img_5.png)
