@@ -57,3 +57,43 @@ operation expenditure vs Capital expenditure (OpEx vs CapEx).Capital expenditure
 The main differences between these three types of cloud service are the level of control and responsibility that the user has over the underlying infrastructure. With IaaS, the user has the most control over the infrastructure, but also has the most responsibility for managing it. With PaaS, the user has less control over the infrastructure, but can focus more on building and deploying applications. With SaaS, the user has the least control over the infrastructure, but can simply use the software application without worrying about infrastructure or maintenance.
 
 Additionally, there are different deployment models for cloud services, including public, private, and hybrid cloud. Public cloud services are available to the general public and are owned and operated by a third-party cloud provider. Private cloud services are used by a single organization and are typically managed in-house or by a third-party service provider. Hybrid cloud services are a combination of public and private cloud, providing the benefits of both.
+
+## Two tier architectures 
+A two-tier architecture is a common pattern for building web applications and services on AWS. In this architecture, the application is divided into two layers: a presentation layer and a data layer.
+
+There are several reasons why a two-tier architecture is important on AWS:
+
+- Scalability: By separating the presentation and data layers, you can scale each layer independently based on its unique requirements. This allows you to handle more traffic and data without affecting the performance of the other layer.
+
+
+
+- Security: Separating the presentation and data layers can also improve security. By isolating the data layer, you can ensure that sensitive data is protected and access is restricted only to authorized users.
+
+
+
+- High availability: A two-tier architecture can also help ensure high availability of your application. By using load balancers and auto-scaling groups, you can distribute traffic across multiple instances of your presentation layer, and if one instance fails, traffic can be automatically rerouted to other healthy instances.
+
+
+
+- Maintenance: Separating the presentation and data layers can make it easier to perform maintenance tasks such as updating software or applying security patches. By isolating each layer, you can avoid disrupting the entire application during maintenance.
+
+
+
+- For DevOps engineers, a two-tier architecture provides several benefits:
+
+- Automation: By using AWS services such as Elastic Beanstalk, CloudFormation, and CodeDeploy, DevOps engineers can automate the deployment and scaling of the presentation and data layers. This allows them to focus on improving the application and delivering new features.
+
+
+
+- Monitoring: DevOps engineers can use AWS services such as CloudWatch and X-Ray to monitor the performance of the presentation and data layers. This allows them to identify issues and optimize the application for better performance.
+
+
+
+- Resilience: DevOps engineers can use AWS services such as Route 53 and AWS Certificate Manager to ensure that the application is resilient and highly available. This reduces the risk of downtime and improves the user experience.
+
+
+
+In summary, a two-tier architecture is important on AWS because it provides scalability, security, high availability, and easier maintenance. It also benefits DevOps engineers by providing automation, monitoring, and resilience.
+
+
+![img_6.png](img_6.png)
