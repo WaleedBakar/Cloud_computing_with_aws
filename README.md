@@ -1,7 +1,7 @@
 # Cloud_computing_with_aws
 
 
-![img.png](Cloud_computing_with_aws/Pictures/img.png)
+![img.png](img.png)
 
 # What is cloud computing?
 Cloud computing is a technology that allows users to access and use computing resources, such as servers, storage, applications, and services, over the internet. These computing resources are provided by third-party providers who manage and maintain the infrastructure necessary to deliver these services.
@@ -96,7 +96,7 @@ There are several reasons why a two-tier architecture is important on AWS:
 In summary, a two-tier architecture is important on AWS because it provides scalability, security, high availability, and easier maintenance. It also benefits DevOps engineers by providing automation, monitoring, and resilience.
 
 
-![img_6.png](Cloud_computing_with_aws/Pictures/img_6.png)
+![img_6.png](img_6.png)
 
 # Requirements 
 
@@ -124,5 +124,5 @@ In summary, a two-tier architecture is important on AWS because it provides scal
 - Now we want to do a resart by doing `sudo systemctl restart mongod`
 - Then do `sudo systemctl enable mongod`
 - now you want to run a status check by doing `sudo systemctl status mongod`
-- This should now be in an active state.
+- this should now be in an active state.
 `

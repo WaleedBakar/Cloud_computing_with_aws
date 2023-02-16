@@ -23,8 +23,8 @@
 11- Access your instance. Once your instance is running, you can access it by SSHing into it using the key pair you created earlier.
 
 12- To do this go to the connection page and follow the steps on screen:
-![img_2.png](Cloud_computing_with_aws/Pictures/img_2.png)
-- Once you have done that you should see the following. ![img_3.png](Cloud_computing_with_aws/Pictures/img_3.png)
+![img_2.png](img_2.png)
+- Once you have done that you should see the following. ![img_3.png](img_3.png)
 
 # Migrating files to AWS
 
@@ -73,4 +73,4 @@ you then want to add the following `server {
 
 
 this Will allow the app to work without port 3000 like so:
-![img_5.png](Cloud_computing_with_aws/Pictures/img_5.png)
+![img_5.png](img_5.png)
