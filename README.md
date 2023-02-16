@@ -125,4 +125,18 @@ In summary, a two-tier architecture is important on AWS because it provides scal
 - Then do `sudo systemctl enable mongod`
 - now you want to run a status check by doing `sudo systemctl status mongod`
 - this should now be in an active state.
-`
+- 
+- we now need to do some configuration on the mongo.conf inside the dp so We now need to go into our db and do `cd /ect`
+`- now look for your file
+- Now do sudo nano (and name of the file) mongo.cof in this case
+- We now need to change the binding ip to 0.0.0.0 (not best practice)
+- we now to create an environment variable for the dp this needs to inclued the ip of your data base
+- now collect the ip 
+- when you have the IP connect to the App to create the environment variable after you connect to the app
+- SSH into the app vm
+- Now do export DB_HOST=mongodb://<your ip from database>:27017/posts
+- now we want to run our app by doing npm install
+- now do `node seeds/seed.js`
+- Then run `node app.js`
+
+And this is what that looks like visually:![img_7.png](img_7.png)
