@@ -1,7 +1,7 @@
 # Cloud_computing_with_aws
 
 
-![img.png](img.png)
+![img.png](Cloud_computing_with_aws/Pictures/img.png)
 
 # What is cloud computing?
 Cloud computing is a technology that allows users to access and use computing resources, such as servers, storage, applications, and services, over the internet. These computing resources are provided by third-party providers who manage and maintain the infrastructure necessary to deliver these services.
@@ -96,7 +96,7 @@ There are several reasons why a two-tier architecture is important on AWS:
 In summary, a two-tier architecture is important on AWS because it provides scalability, security, high availability, and easier maintenance. It also benefits DevOps engineers by providing automation, monitoring, and resilience.
 
 
-![img_6.png](img_6.png)
+![img_6.png](Cloud_computing_with_aws/Pictures/img_6.png)
 
 # Requirements 
 
@@ -108,3 +108,21 @@ In summary, a two-tier architecture is important on AWS because it provides scal
     - Securing architecture with firewalls
  - Separate firewall to app, seperate firewall to database
  - App is exposed to the world, database is exposed only to app, limiting access to database
+ ## Steps
+
+- Make an Ec2 instance 
+- when you get to security group all we need to add is port 27017 because this the port of our database.
+- Now that you have done that your instance should be readyand we now need to ssh into it.
+- To do this we need to ensure our instance is selected and once it has go to the top right and hit connect.
+- You will be bought to a new page and you need to hit `ssh client` and follow the steps on that screen.
+- once you have ssh into the terminal you not want to run `git clone` and clone into your repo 
+- you now want to run the following commands in this order to run mongo db.
+- `sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv D68FA50FEA312927`
+- `echo "deb https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list`
+- `sudo apt-get update -ysudo apt-get upgrade -y`
+- `sudo apt-get install -y mongodb-org=3.2.20 mongodb-org-server=3.2.20 mongodb-org-shell=3.2.20 mongodb-org-mongos=3.2.20 mongodb-org-tools=3.2.20`
+- Now we want to do a resart by doing `sudo systemctl restart mongod`
+- Then do `sudo systemctl enable mongod`
+- now you want to run a status check by doing `sudo systemctl status mongod`
+- This should now be in an active state.
+`
